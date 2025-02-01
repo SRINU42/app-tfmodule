@@ -1,3 +1,4 @@
+
 resource "null-resource" "test" {
     triggers = {
         xyz = timestamp()
