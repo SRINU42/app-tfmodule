@@ -8,3 +8,6 @@ resource "aws_instance" "web" {
     }
 
 }
+provider "aws" {
+    region = "us-east-1"
+}
