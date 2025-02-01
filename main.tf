@@ -1,13 +1,11 @@
 
-resource "aws_instance" "web" {
-//    triggers = {
-//        xyz = timestamp()
-//    }
+resource "null_resource" "test" { 
+    triggers = {
+        xyz = timestamp()
+    }
+ 
     provisioner "local-exec" {
         command =  "echo Hello world - Env - ${var.env}"  
     }
 
-}
-provider "aws" {
-    region = "us-east-1"
 }
