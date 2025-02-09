@@ -83,7 +83,9 @@ resource "aws_instance" "instance" {
   iam_instance_profile   = aws_iam_instance_profile.instance_profile.name
 
   tags = merge {{ 
-    Name = "${var.component}-${var.env}" } , var.tags } 
+    Name = "${var.component}-${var.env}" 
+    } ,
+    var.tags } 
 }
 
 resource "aws_route53_record" "dns" {
